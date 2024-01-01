@@ -1,5 +1,3 @@
-# Redash-Add-On---LLM-Chatbot-for-Advanced-Analytics-and-Visualization
-
 # Redash Add-On - LLM Chatbot for Advanced Analytics and Visualization
 
 ## Introduction
