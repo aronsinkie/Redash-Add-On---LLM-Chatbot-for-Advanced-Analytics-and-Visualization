@@ -3,7 +3,8 @@
 To get started with the project, follow the instructions below:
 
 1. Make a new folder:
-   - 'makdir newfolder' 
+   - 'makdir newfolder'
+      `make r`
 2. Change into the newly created folder:
    - cd  newfolder
 3 To clone the repository
