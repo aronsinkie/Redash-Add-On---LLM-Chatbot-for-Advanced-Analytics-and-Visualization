@@ -25,7 +25,7 @@ We value each team member's contributions to the project. To ensure a smooth col
 
 8. Provide a descriptive title and detailed description for your PR, explaining the purpose and impact of your changes.
 
-9. Our team will review your contribution and provide feedback. Please be open to addressing any requested changes or suggestions.
+9. We will review your contribution and provide feedback. Please be open to addressing any requested changes or suggestions.
 
 10. Once your contribution is approved, it will be merged into the main repository
 
