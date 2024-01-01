@@ -1,11 +1,11 @@
 # Redash Add-On - LLM Chatbot for Advanced Analytics and Visualization
 
 ## Introduction
-The aim of this project is to build a novel Redash chat add-on that enables users to extract insights from multiple Redash dashboards and connected databases using natural language. This chatbot add-on will facilitate seamless conversation in a question and answer format, allowing users to autonomously discover knowledge and obtain deep, meaningful, and actionable insights from business intelligence (BI) platforms.
-
+Welcome, team! We're excited to embark on the Redash Add-On - LLM Chatbot project together. Our objective is to build a novel Redash chat add-on that enables users to extract insights from multiple Redash dashboards and connected databases using natural language. This chatbot add-on will facilitate seamless conversation in a question and answer format, allowing users to autonomously discover knowledge and obtain deep, meaningful, and actionable insights from business intelligence (BI) platforms.
+ 
 ## Contribution Guidelines
 
-Contributions to the project are welcome! We appreciate any efforts to improve the Redash Add-On - LLM Chatbot. To contribute to the project, please follow the guidelines outlined below:
+We value each team member's contributions to the project. To ensure a smooth collaboration process, please follow the guidelines outlined below:
 ### How to Contribute
 
 1. Each team member should create a new branch from the `master` branch. The branch name should reflect the nature of the contribution or feature being worked on.
@@ -26,4 +26,7 @@ Contributions to the project are welcome! We appreciate any efforts to improve t
 
 9. Our team will review your contribution and provide feedback. Please be open to addressing any requested changes or suggestions.
 
-10. Once your contribution is approved, it will be merged into the main repository.
+10. Once your contribution is approved, it will be merged into the main repository
+
+
+We appreciate your hard work and dedication to the Redash Add-On - LLM Chatbot project. Let's collaborate and create something exceptional together!
