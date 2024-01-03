@@ -25,3 +25,6 @@ class DataFrameManipulator:
             self.df = self.df.drop(rows_to_drop)
         else:
             self.df = self.df.drop(self.df.index[rows_to_drop])
+
+
+
