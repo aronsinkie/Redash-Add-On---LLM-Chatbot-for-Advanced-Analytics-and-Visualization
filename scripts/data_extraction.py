@@ -10,8 +10,11 @@ class DataFrameManipulator:
 
         Parameters:
         - new_column_names: Dictionary of old-to-new column names
+
+        Returns:
+        - Modified DataFrame
         """
-        self.df.rename(columns=new_column_names, inplace=True)
+        return self.df.rename(columns=new_column_names)
 
     def drop_rows(self, rows_to_drop, by_index=True):
         """
@@ -20,11 +23,15 @@ class DataFrameManipulator:
         Parameters:
         - rows_to_drop: List of index labels or row numbers to drop
         - by_index: If True, drop rows by index labels; if False, drop rows by row numbers
+
+        Returns:
+        - Modified DataFrame
         """
         if by_index:
-            self.df = self.df.drop(rows_to_drop)
+            return self.df.drop(rows_to_drop)
         else:
-            self.df = self.df.drop(self.df.index[rows_to_drop])
+            return self.df.drop(self.df.index[rows_to_drop])
+
 
 
 
