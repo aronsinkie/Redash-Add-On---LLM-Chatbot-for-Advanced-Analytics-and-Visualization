@@ -21,6 +21,6 @@ class CityChart(Base):
       self.Views = Views
 
 
-# Replace the connection string with the appropriate one for your PostgreSQL database
+
 engine = create_engine('postgresql://username:password@localhost:15432/youtube_data', echo=True)
 Base.metadata.create_all(bind=engine)
