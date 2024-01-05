@@ -4,7 +4,6 @@ class RedashHelper:
     def __init__(self, api_key, redash_url):
         self.api_key = api_key
         self.redash_url = redash_url
-        self.api_url = f"{redash_url}/api/visualizations"
         self.headers = {"Authorization": f"Key {api_key}", "Content-Type": "application/json"}
 
     def create_query(self, name, query, data_source_id):
@@ -109,7 +108,8 @@ class RedashHelper:
 
     def _create_visualization(self, visualization_data):
         try:
-            response = requests.post(self.api_url, headers=self.headers, json=visualization_data)
+            api_url = f"{self.redash_url}/api/visualizations"
+            response = requests.post(api_url, headers=self.headers, json=visualization_data)
 
             if response.status_code == 200:
                 visualization_id = response.json()["id"]
@@ -123,3 +123,31 @@ class RedashHelper:
         except requests.exceptions.RequestException as e:
             print(f"Error in making the API request: {e}")
             return None
+
+    def create_new_dashboard(self, name):
+        try:
+            api_url = f"{self.redash_url}/api/dashboards"
+            dashboard_data = {
+                "name": name,
+            }
+
+            response = requests.post(api_url, headers=headers, json=dashboard_data)
+            dashboard_slug = response.json()["slug"]
+            dashboard_id = response.json()["id"]
+            return (dashboard_slug, dashboard_id)
+        except requests.exceptions.RequestException as e:
+            print(f"Error in creating dashboard {e}")
+            return None
+    
+    def add_visualization_to_dashboard(self, dashboard_id, visualization_id):
+        try:
+            api_url = f"{self.redash_url}/api/dashboards/{dashboard_id}"
+
+            widget_data = {
+                "visualization_id": visualization_id,
+                "width": 3,
+            }
+
+            response = requests.post(api_url, headers=headers, json=widget_data)
+        except requests.exceptions.RequestException as e:
+            print(f"Error in adding the visualization. {e}")
