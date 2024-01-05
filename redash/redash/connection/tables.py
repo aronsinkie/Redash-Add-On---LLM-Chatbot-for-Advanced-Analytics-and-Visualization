@@ -19,20 +19,7 @@ class CityChart(Base):
       self.city_id = city_id
       self.city_name = city_name
       self.Views = Views
-    class Cities_chart(Base):
-    __tablename__ = "cities_chart"
-
-    id = Column("id", Integer, primary_key=True)
-    date = Column("date", Date)
-    views = Column("views", Integer)
-    cities = Column(String, ForeignKey("cities_info.cities"))
-
-    def __init__(self, id, date, view, cities):
-        self.id = id
-        self.date  = date
-        self.view = view
-        self.cities = cities
-
+      
 class Content_type_info(Base):
     __tablename__ = "content_type_info"
 
