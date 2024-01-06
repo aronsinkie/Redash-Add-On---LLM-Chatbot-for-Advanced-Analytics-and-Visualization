@@ -22,7 +22,7 @@ export default function ApplicationLayout({ children }) {
         </div>
         <div>
           <DynamicComponent name="ApplicationDesktopChat">
-            <ChatBox />
+            <ChatBox/>
           </DynamicComponent>
         </div>
         <div className="application-layout-content">
