@@ -7,7 +7,7 @@ class ConnectToPostgres:
             'host': 'localhost',
             'user': 'postgres',
             'port': '15432',
-            'database': 'youtube_data'
+            'database': 'youtube_datas'
         }
 
         try:

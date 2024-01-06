@@ -12,6 +12,7 @@ const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 const path = require("path");
+const { ESLint } = require("eslint");
 
 function optionalRequire(module, defaultReturn = undefined) {
   try {
@@ -102,9 +103,9 @@ const config = {
       excludeChunks: ["server"]
     }),
     isProduction &&
-      new MiniCssExtractPlugin({
-        filename: "[name].[chunkhash].css"
-      }),
+    new MiniCssExtractPlugin({
+      filename: "[name].[chunkhash].css"
+    }),
     new ManifestPlugin({
       fileName: "asset-manifest.json",
       publicPath: ""
@@ -141,7 +142,14 @@ const config = {
               ].filter(Boolean)
             }
           },
-          require.resolve("eslint-loader")
+          {
+            loader: "eslint-loader",
+
+            options: {
+              eslintPath: "eslint"
+            }
+          },
+          /* require.resolve("eslint-loader")*/
         ]
       },
       {
