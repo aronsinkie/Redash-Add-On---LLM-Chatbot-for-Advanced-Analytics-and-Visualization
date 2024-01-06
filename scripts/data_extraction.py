@@ -30,16 +30,16 @@ class DataFrameManipulator:
         if by_index:
             return self.df.drop(rows_to_drop)
         else:
-            return self.df.drop(self.df.index[rows_to_drop]
-    def drop_columns(df, columns_to_drop):
-    """
-    Drop columns from the Pandas DataFrame.
+            return self.df.drop(self.df.index[rows_to_drop])
 
-    Parameters:
-    - df: Pandas DataFrame
-    - columns_to_drop: List of column names to drop
+    def drop_columns(self, columns_to_drop):
+        """
+        Drop columns from the Pandas DataFrame.
 
-    Returns:
-    - Modified DataFrame
-    """
-    return df.drop(columns=columns_to_drop)
+        Parameters:
+        - columns_to_drop: List of column names to drop
+
+        Returns:
+        - Modified DataFrame
+        """
+        return self.df.drop(columns=columns_to_drop)
