@@ -4,6 +4,7 @@ import DynamicComponent from "@/components/DynamicComponent";
 import DesktopNavbar from "./DesktopNavbar";
 import MobileNavbar from "./MobileNavbar";
 import ChatBox from "@/components/chat/ChatBox";
+
 import "./index.less";
 
 export default function ApplicationLayout({ children }) {

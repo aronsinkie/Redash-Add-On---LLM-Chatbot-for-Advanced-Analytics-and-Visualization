@@ -26,4 +26,4 @@ class ChatResource(BaseResource):
             return jsonify(response_data), 200
         except Exception as error:
             print(error)
-            return jsonify({"error": "An error occurred"}), 500
+     
